@@ -1,0 +1,3 @@
+<!DOCTYPE html><html>	<head>		<meta charset="utf-8">		<title></title>		<script src="http://unpkg.com/vue@next"></script>	</head>	<body>		<div id="app" v-on:change="showInfo">			<input type="checkbox" id="ck1" value="香蕉"/>香蕉			     <input type="checkbox" id="ck2" value="苹果"/>苹果				 <input type="checkbox" id="ck3" value="葡萄"/>葡萄
+				 <input type="checkbox" id="ck4" value="柚子"/>柚子
+				 <input type="checkbox" id="ck5" value="榴莲"/>榴莲		</div>				<script type="text/javascript">			Vue.createApp({				data(){					return{						chk:"checked",						checkbox:[],					}				},				methods:{					showInfo(){						console.log("失去焦点会触发",this.info)					}				}			}).mount("#app")		</script>	</body></html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://unpkg.com/vue@next"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{massage}}
+			<input v-model="massage" />
+			<button v-on:click="massage='Love'">点击</button>
+			{{SayHi()}}
+		</div>
+		<script type="text/javascript">
+			Vue.createApp({
+				data(){
+					return{
+						massage:"Hello Vue!!!"
+					}
+				},
+				methods:{
+					SayHi(){
+						return "hello";
+					}
+				}
+			}).mount("#app")
+		</script>
+	</body>
+</html>

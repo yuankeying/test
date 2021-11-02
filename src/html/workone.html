@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://unpkg.com/vue@next"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div v-bind:style="color">
+				<input type="button" value="点击" v-on:click="color==''?addColor():addColors()"/>
+			</div>
+		</div>
+		<script type="text/javascript">
+			Vue.createApp({
+				data(){
+					return{
+						color:""
+					}
+				},
+				methods:{
+					addColor(){
+						this.color="background-color:red;width:100%;height:100%;position:fixed"
+					},
+					addColors(){
+						this.color=""
+					}
+				}
+			}).mount("#app")
+		</script>
+	</body>
+</html>

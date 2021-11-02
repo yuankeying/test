@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="http://unpkg.com/vue@next"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p id="wz" v-bind:style="font">我是文字，默认12像素</p>
+			{{value}}<input type="range" v-on:change="one()" id="b" min="1" max="32" value="1" />
+		</div>
+		<script type="text/javascript">
+			Vue.createApp({
+				data(){
+					return{
+						font:"font-size",
+						value:1,
+						dw:"px"
+					}
+				},
+				methods:{
+					one:function(){
+						var a = document.getElementById("b");
+						this.value=a.value
+					}
+				}
+			}).mount("#app")
+		</script>
+	</body>
+</html>

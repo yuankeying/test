@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input id="t1" type="text" />
+		<p id="p1"></p>
+		<input type="button" value="点击" onclick="showValue()"/>
+		<script type="text/javascript" charset="UTF-8">
+			var s = "Hello";
+			var t1 = document.getElementById("t1");
+			t1.value=s;
+			function showValue(){
+				var v = t1.value;
+				var p1 = document.getElementById("p1");
+				p1.innerHTML=v;
+			}
+		</script>
+	</body>
+</html>

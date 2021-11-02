@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="http://unpkg.com/vue@next"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h2>{{fistName.length}}</h2>
+			<h2>{{fistName+lastName}}</h2>
+			<h2>{{fistName=="Jack"?"真棒":"还好"}}</h2>
+			<h2>{{lastName.split("a").reverse().join(",")}}</h2>
+			<h2>{{customMethods(lastName)}}</h2>
+		</div>
+		<script type="text/javascript">
+			const vm=Vue.createApp({
+				data(){
+					return{
+						fistName:"Jack",
+						lastName:"Jams",
+						age:13,
+						msg:'<a href="http://www.baidu.com"></a>'
+					}
+				},
+				methods:{
+					customMethods(str){
+						return str.split("a").reverse().join(",")
+					}
+				}
+				
+			}).mount("#app")
+		</script>
+	</body>
+</html>
